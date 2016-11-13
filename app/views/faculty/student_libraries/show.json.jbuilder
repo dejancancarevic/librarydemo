@@ -1,0 +1,1 @@
+json.partial! "faculty_student_libraries/faculty_student_library", faculty_student_library: @faculty_student_library

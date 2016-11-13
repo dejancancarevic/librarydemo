@@ -1,0 +1,23 @@
+<h1>Listing student_libraries</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @student_libraries.each do |student_library| %>
+  <tr>
+    <td><%= student_library.name %></td>
+    <td><%= link_to 'Show', [student_library.faculty, student_library] %></td>
+    <td><%= link_to 'Edit', edit_faculty_student_library_path(student_library.faculty, student_library) %></td>
+    <td><%= link_to 'Destroy', [student_library.faculty, student_library], :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Student library', new_faculty_student_library_path(params[:faculty_id]) %>

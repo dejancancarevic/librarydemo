@@ -1,0 +1,1 @@
+json.array! @student_library_books, partial: 'student_library_books/student_library_book', as: :student_library_book

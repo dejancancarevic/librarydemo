@@ -1,0 +1,1 @@
+json.array! @university_faculty_student_library_books, partial: 'university_faculty_student_library_books/university_faculty_student_library_book', as: :university_faculty_student_library_book
