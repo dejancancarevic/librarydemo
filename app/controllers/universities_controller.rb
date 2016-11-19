@@ -1,12 +1,15 @@
 class UniversitiesController < ApplicationController
   before_action :set_university, only: [:show, :edit, :update, :destroy]
 
+  # Whenever single object is in question this will authorize it
+  before_action :authorize_single_resource
+  # Whenever collection is in question this will authorize it
+  before_action :authorize_index_resources
 
 
   # GET /universities
   # GET /universities.json
   def index
-    abc
     @universities = University.all
   end
 

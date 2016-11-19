@@ -1,7 +1,8 @@
 class BookPolicy < Hogar::ApplicationPolicy
 
-  def test
+  def test?
     puts "testing"
+    true
   end
 
 end
