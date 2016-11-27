@@ -54,5 +54,6 @@ gem 'better_errors'
 gem 'binding_of_caller'
 gem 'seedbank'
 gem 'byebug'
+gem 'gon' # Simple way to make Rails variables available in JS/Coffeescript, see: https://github.com/gazay/gon
 
 gem 'hogar', path: "~/Documents/ror/pp/hogar"
