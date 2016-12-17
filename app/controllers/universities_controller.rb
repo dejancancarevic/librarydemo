@@ -1,5 +1,6 @@
 class UniversitiesController < ApplicationController
   before_action :set_university, only: [:show, :edit, :update, :destroy]
+  before_action :create_university, only: [:create]
 
   # Whenever single object is in question this will authorize it
   before_action :authorize_single_resource
@@ -30,8 +31,6 @@ class UniversitiesController < ApplicationController
   # POST /universities
   # POST /universities.json
   def create
-    @university = University.new(university_params)
-
     respond_to do |format|
       if @university.save
         format.html { redirect_to @university, notice: 'University was successfully created.' }
@@ -84,6 +83,10 @@ class UniversitiesController < ApplicationController
   # Use callbacks to share common setup or constraints between actions.
   def set_university
     @university = University.find(params[:id])
+  end
+
+  def create_university
+    @university = University.new(university_params)
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
